@@ -1,0 +1,27 @@
+---
+import { SITE } from "../../../config";
+
+import Menu from "./Menu";
+---
+
+<header>
+  <div class="flex justify-between items-center mx-auto">
+    <div class="flex gap-4">
+      <a href="/">{SITE.name}</a>
+      <a href="/example">Example page</a>
+    </div>
+    <div>
+      <Menu client:load />
+      <button
+        id="theme-btn"
+        class="relative cursor-pointer"
+        title="Toggles light & dark"
+        aria-label="auto"
+        aria-live="polite"
+      >
+        <span class="dark:hidden block">Luna</span>
+        <span class="dark:block hidden">Sol</span>
+      </button>
+    </div>
+  </div>
+</header>
