@@ -1,28 +1,22 @@
 ---
 import { SITE } from "../../config";
-
-import { Moon, Sun } from "@lucide/astro";
 ---
 
 <header>
-  <div class="flex justify-between items-center mx-auto container py-4">
+  <div class="flex justify-between items-center mx-auto">
     <div class="flex gap-4">
       <a href="/">{SITE.name}</a>
       <a href="/example">Example page</a>
     </div>
     <button
       id="theme-btn"
-      class="relative size-12 p-4 sm:size-8"
+      class="relative cursor-pointer"
       title="Toggles light & dark"
       aria-label="auto"
       aria-live="polite"
     >
-      <Moon
-        class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] dark:hidden block"
-      />
-      <Sun
-        class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] dark:block hidden"
-      />
+      <span class="dark:hidden block">Luna</span>
+      <span class="dark:block hidden">Sol</span>
     </button>
   </div>
 </header>
