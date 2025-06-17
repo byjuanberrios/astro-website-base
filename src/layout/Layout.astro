@@ -1,0 +1,32 @@
+---
+import SEO from "../components/SEO.astro";
+import type { SEOProps } from "../@types";
+
+const {
+  title,
+  description,
+  ogImage,
+  copyrightText,
+  twitterUsername,
+  twitterDomain,
+} = Astro.props as SEOProps;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <SEO
+      {...{
+        title,
+        description,
+        ogImage,
+        copyrightText,
+        twitterUsername,
+        twitterDomain,
+      }}
+    />
+  </head>
+  <body><slot /></body>
+</html>
