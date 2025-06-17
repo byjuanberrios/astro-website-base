@@ -13,7 +13,7 @@ const {
 } = Astro.props as SEOProps;
 
 const defaultPageData = {
-  title: title ? `${title} — ${SITE.title}` : SITE.title,
+  title: title ? `${title} — ${SITE.name}` : SITE.name,
   description: description ? description : SITE.description,
   canonical: new URL(currentPath, Astro.url),
   socialImageURL: ogImage
@@ -44,6 +44,8 @@ const defaultPageData = {
 <meta property="og:image:height" content="628" />
 <meta name="twitter:image" content={defaultPageData.socialImageURL} />
 <meta itemprop="image" content={defaultPageData.socialImageURL} />
+
+<meta name="robots" content="index, follow, noarchive, max-snippet:150" />
 
 {copyrightText && <meta name="copyright" content={copyrightText} />}
 

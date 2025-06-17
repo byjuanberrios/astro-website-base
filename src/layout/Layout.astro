@@ -2,6 +2,13 @@
 import SEO from "../components/SEO.astro";
 import type { SEOProps } from "../@types";
 
+// Styles
+import "./src/styles/global.css";
+
+// Shared Components
+import Header from "../components/shared/Header.astro";
+import Footer from "../components/shared/Footer.astro";
+
 const {
   title,
   description,
@@ -13,7 +20,7 @@ const {
 ---
 
 <!doctype html>
-<html lang="es">
+<html lang="es" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,6 +34,11 @@ const {
         twitterDomain,
       }}
     />
+    <script is:inline src="/toggle-theme.js"></script>
   </head>
-  <body><slot /></body>
+  <body class="bg-white dark:bg-black text-black dark:text-white">
+    <Header />
+    <slot />
+    <Footer />
+  </body>
 </html>
