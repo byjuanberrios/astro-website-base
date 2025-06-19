@@ -1,47 +1,73 @@
-# Astro Starter Kit: Minimal
+# Plantilla Starter Astro + React
 
-```sh
-pnpm create astro@latest -- --template minimal
+Este proyecto es una plantilla base para iniciar rápidamente el desarrollo de un nuevo sitio web utilizando [Astro](https://astro.build/) y [React](https://react.dev/). Incluye una estructura organizada, componentes reutilizables y configuración inicial para facilitar el desarrollo.
+
+## 🚀 ¿Qué incluye esta plantilla?
+
+- **Astro** como framework principal para sitios rápidos y modernos.
+- **React** integrado para crear componentes interactivos fácilmente.
+- Estructura de carpetas recomendada para escalabilidad.
+- Ejemplo de configuración de rutas, temas y menús.
+- Componentes compartidos como Header, Footer y botones de tema.
+- Estilos globales listos para personalizar.
+
+## 📁 Estructura del proyecto
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
 /
-├── public/
+├── public/                # Archivos estáticos (imágenes, favicon, etc.)
 ├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+│   ├── assets/            # Recursos como imágenes
+│   ├── components/        # Componentes Astro y React reutilizables
+│   ├── layout/            # Layouts base para las páginas
+│   ├── lib/               # Lógica y utilidades compartidas
+│   ├── pages/             # Páginas del sitio (rutas)
+│   ├── store/             # Estado global o stores
+│   └── styles/            # Estilos globales y específicos
+├── astro.config.mjs       # Configuración de Astro
+├── package.json           # Dependencias y scripts
+└── tsconfig.json          # Configuración de TypeScript
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## ⚙️ Configuración inicial
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+1. **Instala las dependencias:**
 
-Any static assets, like images, can be placed in the `public/` directory.
+   ```sh
+   pnpm install
+   ```
 
-## 🧞 Commands
+2. **Configura los datos del sitio:**
 
-All commands are run from the root of the project, from a terminal:
+   - Edita `src/config.ts` para personalizar el nombre, descripción y enlaces del sitio.
+   - Personaliza los menús en `src/lib/Menus.ts`.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+3. **Personaliza los componentes:**
 
-## 👀 Want to learn more?
+   - Modifica los componentes en `src/components/` según tus necesidades.
+   - Cambia el layout base en `src/layout/Layout.astro`.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+4. **Ajusta los estilos:**
+
+   - Edita `src/styles/global.css` para adaptar la apariencia a tu marca.
+
+5. **Agrega tus páginas:**
+   - Crea nuevas páginas en `src/pages/` usando `.astro` o `.mdx`.
+
+## 🧞 Comandos útiles
+
+| Comando          | Acción                                |
+| ---------------- | ------------------------------------- |
+| `pnpm dev`       | Inicia el servidor de desarrollo      |
+| `pnpm build`     | Genera el sitio listo para producción |
+| `pnpm preview`   | Previsualiza el sitio generado        |
+| `pnpm astro ...` | Ejecuta comandos de Astro CLI         |
+
+## 📚 Recursos
+
+- [Documentación de Astro](https://docs.astro.build/es/)
+- [Documentación de React](https://es.react.dev/)
+
+---
+
+¡Utiliza esta plantilla para acelerar el inicio de tu próximo proyecto web con Astro y React!
