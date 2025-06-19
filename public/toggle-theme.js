@@ -12,7 +12,7 @@ const applyTheme = (theme) => {
     localStorage.setItem("theme", theme);
 
     // Update the button's aria-label for accessibility
-    const themeToggleButton = document.querySelector("#theme-btn");
+    const themeToggleButton = document.querySelector(".theme-btn");
     if (themeToggleButton) {
         themeToggleButton.setAttribute("aria-label", theme);
     }
@@ -48,7 +48,7 @@ const handleThemeToggleClick = () => {
  * This is crucial for handling DOM re-renders (e.g., with Astro View Transitions).
  */
 const setupThemeToggleListener = () => {
-    const themeToggleButton = document.querySelector("#theme-btn");
+    const themeToggleButton = document.querySelector(".theme-btn");
     if (themeToggleButton) {
         // Remove any existing listeners to avoid duplicates
         themeToggleButton.removeEventListener("click", handleThemeToggleClick);
@@ -64,7 +64,7 @@ const setupThemeToggleListener = () => {
 applyTheme(getInitialTheme());
 
 // 2. Set up the event listener for the theme switch button once the page has loaded.
-// This ensures that the '#theme-btn' button is already available in the DOM.
+// This ensures that the '.theme-btn' button is already available in the DOM.
 window.onload = setupThemeToggleListener;
 
 // 3. Listen for changes to the operating system's theme preference.

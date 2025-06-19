@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
@@ -411,4 +410,13 @@
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
       }
     } */
+}
+
+.astro-loading-indicator {
+  background-color: var(--color-black);
+}
+.dark {
+  .astro-loading-indicator {
+    background-color: var(--color-white);
   }
+}

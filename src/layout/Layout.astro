@@ -1,10 +1,11 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import LoadingIndicator from "astro-loading-indicator/component";
 import SEO from "../components/SEO.astro";
 import type { SEOProps } from "../@types";
 
 // Styles
-import "./src/styles/global.css";
+import "@/styles/global.css";
 
 // Shared Components
 import Header from "../components/shared/Header/index.astro";
@@ -36,6 +37,7 @@ const {
       }}
     />
     <ClientRouter />
+    <LoadingIndicator color="transparent" height="2px" threshold={false} />
     <script is:inline src="/toggle-theme.js"></script>
   </head>
   <body class="bg-white dark:bg-black text-black dark:text-white">

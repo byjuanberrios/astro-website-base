@@ -8,3 +8,12 @@ export type SEOProps = {
   twitterUsername?: string;
   twitterDomain?: string;
 };
+
+export interface MenuListItem {
+  name: string;
+  link?: string;
+}
+
+export interface MenuListProps extends MenuListItem {
+  submenus?: MenuListItem[];
+}
